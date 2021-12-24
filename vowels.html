@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(207, 233, 148, 1) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        /* window.open( 'https://google.com', '_blank');This is what makes it open in a new window. use at button */
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+
+        <div class="row">
+            <div class="col">
+                <form class="row">
+                    <div class="col-3">
+                        <label for="" class="display-6">Enter Your Name:</label>
+                    </div>
+                    <div class="col-auto mt-5">
+
+                        <input type="text" class="form-control" id="inputtext" placeholder="Type name here">
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <form class="row my-3">
+                    <div class="col-3">
+                        <label for="" class="display-6">Vowels:</label>
+                    </div>
+                    <div class="col-auto">
+
+                        <input type="text" class="form-control" id="vowels" placeholder="No. of vowels ">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <form class="row">
+                    <div class="col-3">
+                        <label for="" class="display-6">Total count:</label>
+                    </div>
+                    <div class="col-auto">
+
+                        <input type="text" class="form-control" id="vcount" placeholder="count">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class=" mt-5">
+                    <button type="submit" onclick="Vowels()" class="btn btn-primary mb-3">Check</button>
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class=" mt-5">
+                    <button type="submit" class="btn btn-danger mb-3" onclick="window.open('https://abhishekkumar4444.github.io/currencyconverter/', '_blank')">GitHUB</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js "></script>
+        <script>
+            function Vowels() {
+                var str = document.getElementById('inputtext').value;
+                var count = 0,
+                    total_vowels = "";
+                for (var i = 0; i < str.length; i++) {
+                    if (str.charAt(i).match(/[a-zA-Z]/) != null) {
+                        if (str.charAt(i).match(/[aeiouAEIOU]/g)) {
+                            total_vowels = total_vowels + str.charAt(i);
+                            count++;
+                        }
+                    }
+                }
+                document.getElementById('vowels').value = total_vowels;
+                document.getElementById('vcount').value = count;
+            }
+        </script>
+</body>
+
+</html>
