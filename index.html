@@ -75,7 +75,7 @@
             </div>
             <div class="col-3">
                 <div class=" mt-5">
-                    <button type="submit" class="btn btn-danger mb-3" onclick="window.open('https://github.com/Abhishekkumar4444/vowels-in-name')">GitHUB</button>
+                    <button type="submit" class="btn btn-danger mb-3" id="github">GitHUB</button>
                 </div>
 
             </div>
@@ -85,6 +85,11 @@
 
         <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js "></script>
         <script>
+            const github = document.getElementById("github");
+            github.addEventListener("click",fun);
+              function fun() {
+                             window.location = "https://github.com/Abhishekkumar4444/vowels-in-name";
+                            }
             function Vowels() {
                 var str = document.getElementById('inputtext').value;
                 var count = 0,
